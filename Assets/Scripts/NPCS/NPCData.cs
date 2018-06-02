@@ -7,4 +7,10 @@ public class NPCData : MonoBehaviour
 {
 	[HideInInspector]
 	public float tanLevel = 0f;
+
+	[HideInInspector]
+	public float burnLevel = 0f;
+
+	[HideInInspector]
+	public bool isInSun = true;
 }

@@ -388,6 +388,7 @@ GameObject:
   - component: {fileID: 114781333171472670}
   - component: {fileID: 114782200634486588}
   - component: {fileID: 114915594492966788}
+  - component: {fileID: 114367883098038762}
   m_Layer: 0
   m_Name: Animated Human
   m_TagString: Untagged
@@ -1546,6 +1547,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goal: {fileID: 0}
+--- !u!114 &114367883098038762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425505682345718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cb6e092343d4be9a90d53e6552318c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tanningRate: 2
+  burnAcceleration: 0.5
 --- !u!114 &114376896911453164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1580,6 +1594,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tanLevel: 0
+  burnLevel: 0
+  isInSun: 1
 --- !u!114 &114915594492966788
 MonoBehaviour:
   m_ObjectHideFlags: 1
