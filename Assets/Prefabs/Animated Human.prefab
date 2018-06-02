@@ -384,6 +384,8 @@ GameObject:
   - component: {fileID: 136174429733882482}
   - component: {fileID: 195620803439824802}
   - component: {fileID: 114296362140548782}
+  - component: {fileID: 114376896911453164}
+  - component: {fileID: 114781333171472670}
   m_Layer: 0
   m_Name: Animated Human
   m_TagString: Untagged
@@ -1361,7 +1363,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1425505682345718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.04, y: 1.49, z: 5.33}
+  m_LocalPosition: {x: 3.0220857, y: 1.35, z: 5.675899}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4786933700439544}
@@ -1542,6 +1544,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goal: {fileID: 0}
+--- !u!114 &114376896911453164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425505682345718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6728c8d2ee3c4c24b46093e2d57eeb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114781333171472670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425505682345718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6225f2a71a99451fb46419704913ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136174429733882482
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1570,7 +1594,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: d6fbca8f41d3340929ca89c2717d823a, type: 2}
+  - {fileID: 2100000, guid: aed715ddaaa2e444c804f4a05b94ff9d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

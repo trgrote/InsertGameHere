@@ -598,28 +598,6 @@ Prefab:
       propertyPath: goal
       value: 
       objectReference: {fileID: 564231864}
-    - target: {fileID: 137175956243253582, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: aed715ddaaa2e444c804f4a05b94ff9d, type: 2}
-    - target: {fileID: 4815970655240350, guid: 017d68f8fc24f4933b3ad226f3e3485c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4815970655240350, guid: 017d68f8fc24f4933b3ad226f3e3485c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4815970655240350, guid: 017d68f8fc24f4933b3ad226f3e3485c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 95821339642629424, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 017d68f8fc24f4933b3ad226f3e3485c, type: 2}
   m_IsPrefabParent: 0
@@ -731,22 +709,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 460750, guid: d2104aa152d99894d8df3c31a9ee634b, type: 2}
   m_PrefabInternal: {fileID: 879674844}
---- !u!1 &862192960 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1425505682345718, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-    type: 2}
-  m_PrefabInternal: {fileID: 577470113}
---- !u!114 &862192961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 862192960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6728c8d2ee3c4c24b46093e2d57eeb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &879674844
 Prefab:
   m_ObjectHideFlags: 0
