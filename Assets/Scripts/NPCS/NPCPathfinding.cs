@@ -6,7 +6,7 @@ public class NPCPathfinding : MonoBehaviour
 {
 	public Transform goal;
 	
-	void Start () 
+	void Update () 
 	{
 		UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 		agent.destination = goal.position;
