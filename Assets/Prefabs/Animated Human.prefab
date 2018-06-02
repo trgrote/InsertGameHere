@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 114296362140548782}
   - component: {fileID: 114376896911453164}
   - component: {fileID: 114781333171472670}
+  - component: {fileID: 114782200634486588}
   m_Layer: 0
   m_Name: Animated Human
   m_TagString: Untagged
@@ -1566,6 +1567,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6225f2a71a99451fb46419704913ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114782200634486588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425505682345718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98efe2e0f26994855b9c8272bcf7e0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tanLevel: 0
 --- !u!136 &136174429733882482
 CapsuleCollider:
   m_ObjectHideFlags: 1
