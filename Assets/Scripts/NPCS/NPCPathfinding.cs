@@ -8,7 +8,10 @@ public class NPCPathfinding : MonoBehaviour
 	
 	void Update () 
 	{
-		UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-		agent.destination = goal.position;
+		if (goal)
+		{
+			UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+			agent.destination = goal.position;
+		}
 	}
 }
