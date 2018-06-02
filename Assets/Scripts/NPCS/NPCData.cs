@@ -6,5 +6,5 @@ using UnityEngine;
 public class NPCData : MonoBehaviour 
 {
 	[HideInInspector]
-	public float tanLevel;
+	public float tanLevel = 0f;
 }

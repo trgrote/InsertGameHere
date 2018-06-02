@@ -6,7 +6,7 @@ public class NPCPathfinding : MonoBehaviour
 {
 	public Transform goal;
 	
-	void Update () 
+	void Start () 
 	{
 		if (goal)
 		{

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Stateless;
 
 // All the thinking and desires the NPCS have
 [RequireComponent(typeof(NPCData))]
