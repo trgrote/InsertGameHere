@@ -49,11 +49,13 @@ public class MouseDraggable : MonoBehaviour
 		Ray ray = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 		RaycastHit hit;
 		// if (Physics.Raycast(ray, out hit))
-		if (Physics.Raycast(ray, out hit, 60000.0f, TerrainLayerMask.value))
-			// print(hit);
-			if (hit.point != null) {
-				curPosition = hit.point;
-				transform.position = curPosition;
+		if (Physics.Raycast(ray, out hit, 600.0f, TerrainLayerMask.value))
+			{
+				print(hit.collider);
+				if (hit.point != null) {
+					curPosition = hit.point;
+					transform.position = curPosition;
+				}
 			}
 	}
 

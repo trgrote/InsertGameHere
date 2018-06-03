@@ -104,7 +104,7 @@ NavMeshSettings:
     agentSlope: 47
     agentClimb: 0.52
     ledgeDropHeight: 0
-    maxJumpAcrossDistance: 0
+    maxJumpAcrossDistance: 3.96
     minRegionArea: 2
     manualCellSize: 0
     cellSize: 0.24333334
@@ -595,7 +595,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4628218302947248, guid: e84650c260ea14b4b9e45a6c21d9e2aa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.52
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 4628218302947248, guid: e84650c260ea14b4b9e45a6c21d9e2aa, type: 2}
       propertyPath: m_LocalPosition.z
@@ -835,7 +835,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4129048987033128, guid: 4cb9f7180c3dcf346896c0627fd965fd, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cb9f7180c3dcf346896c0627fd965fd, type: 2}
@@ -1195,7 +1195,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4227219504927588, guid: b018058332634c94886148aeb944bb8e, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b018058332634c94886148aeb944bb8e, type: 2}
@@ -1345,7 +1345,7 @@ RectTransform:
   m_Children:
   - {fileID: 451115682}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1454,7 +1454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1956350462 stripped
 Transform:
@@ -1595,7 +1595,7 @@ MeshCollider:
   m_GameObject: {fileID: 2107340562}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -1607,7 +1607,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2107340562}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1650,7 +1650,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2107340562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -5, z: 697}
+  m_LocalPosition: {x: 1, y: -3, z: 697}
   m_LocalScale: {x: 87.028114, y: 87.027885, z: 259.5271}
   m_Children: []
   m_Father: {fileID: 0}
