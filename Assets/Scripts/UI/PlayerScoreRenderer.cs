@@ -10,7 +10,7 @@ public class PlayerScoreRenderer : MonoBehaviour
 
 	void Update()
 	{
-		tannedText.text = string.Format("People Tanned = {0}", PlayerScore.NumTanned);
-		burnedText.text = string.Format("People BURNED = {0}", PlayerScore.NumBurned);
+		tannedText.text = string.Format("Tanned: {0}", PlayerScore.NumTanned);
+		burnedText.text = string.Format("BURNED: {0}", PlayerScore.NumBurned);
 	}
 }
