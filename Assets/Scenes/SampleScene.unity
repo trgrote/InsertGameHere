@@ -1378,9 +1378,35 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 1425505682345718, guid: 017d68f8fc24f4933b3ad226f3e3485c, type: 2}
-      propertyPath: m_IsActive
+    - target: {fileID: 114391327923288908, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: maxBurnRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114391327923288908, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: volumeCurve.m_Curve.Array.data[1].inSlope
+      value: 3.156842
+      objectReference: {fileID: 0}
+    - target: {fileID: 114391327923288908, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: volumeCurve.m_Curve.Array.data[1].outSlope
+      value: 3.156842
+      objectReference: {fileID: 0}
+    - target: {fileID: 114391327923288908, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: volumeCurve.m_Curve.Array.data[0].inSlope
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114391327923288908, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: volumeCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114391327923288908, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: volumeCurve.m_Curve.Array.data[1].inWeight
+      value: 0.035519123
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 017d68f8fc24f4933b3ad226f3e3485c, type: 2}
@@ -1823,7 +1849,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1748192379824588, guid: 84c5d948ce17347568f04f7b9451eeba, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84c5d948ce17347568f04f7b9451eeba, type: 2}
