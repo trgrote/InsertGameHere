@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Stateless;
 using UnityEngine.AI;
@@ -101,12 +102,26 @@ public class NPCLogic : MonoBehaviour
 
 	#region Finding Items with Tags
 
+	Vector3 FindClosestPosition(Vector3 position, GameObject[] objs)
+	{
+		return objs.Aggregate<GameObject, GameObject, Vector3>(
+				null, // start with max distance object
+				(closestObj, nextObj) => 
+				{
+					if (closestObj == null) return nextObj;
+					return Vector3.Distance(nextObj.transform.position, position) < Vector3.Distance(closestObj.transform.position, position) ? nextObj : closestObj;
+				},
+				(closestObj) => closestObj.transform.position
+			);
+	}
+
 	void FindNearestFireTarget()
 	{
-		Vector3 dest = new Vector3();
-		if (FindRandomObjectWithTag(fireExitTag, out dest))
+		var objs = GameObject.FindGameObjectsWithTag(fireExitTag);
+		if (objs.Length > 0)
 		{
-			agent.destination = dest;
+			var position = transform.position;
+			agent.destination = FindClosestPosition(position, objs);
 			agent.isStopped = false;
 		}
 		else
@@ -117,10 +132,11 @@ public class NPCLogic : MonoBehaviour
 
 	void FindNearestTannedTarget()
 	{
-		Vector3 dest = new Vector3();
-		if (FindRandomObjectWithTag(tannedExitTag, out dest))
+		var objs = GameObject.FindGameObjectsWithTag(tannedExitTag);
+		if (objs.Length > 0)
 		{
-			agent.destination = dest;
+			var position = transform.position;
+			agent.destination = FindClosestPosition(position, objs);
 			agent.isStopped = false;
 		}
 		else
