@@ -31,7 +31,7 @@ public class NPCLogic : MonoBehaviour
 
 	NavMeshAgent agent;
 
-	void Start()
+	void Awake()
 	{
 		data = GetComponent<NPCData>();
 		agent = GetComponent<NavMeshAgent>(); 
@@ -39,6 +39,9 @@ public class NPCLogic : MonoBehaviour
 		data._sm = new StateMachine<NPCData.eState, NPCData.eTrigger>(
 			() => data.State, 
 			s => data.State = s);
+
+		// Configure Every state change to also trigger callback event
+		data._sm.OnTransitioned((t) => data.StateChanged.Invoke() );
 
 		data._sm.Configure(NPCData.eState.Tanning)
 			.Permit(NPCData.eTrigger.CatchFire, NPCData.eState.OnFire)
@@ -85,7 +88,10 @@ public class NPCLogic : MonoBehaviour
 				.OnEntry(FindNearestTannedTarget)
 				.OnEntry(() => rho.GlobalEventHandler.SendEvent(new NPCLeft{onFire = false}));
 		}
+	}
 
+	void Start()
+	{
 		// Fake a reached interest call at the begining to restimulate idle
 		data._sm.Fire(NPCData.eTrigger.ReachedInterest);
 	}

@@ -406,6 +406,8 @@ GameObject:
   - component: {fileID: 114915594492966788}
   - component: {fileID: 114367883098038762}
   - component: {fileID: 114099163303900716}
+  - component: {fileID: 82380025532503742}
+  - component: {fileID: 114286986807872648}
   m_Layer: 0
   m_Name: Animated Human
   m_TagString: NPC
@@ -1397,8 +1399,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1425505682345718}
-  m_LocalRotation: {x: -0, y: 0.9969689, z: -0, w: 0.077800885}
-  m_LocalPosition: {x: 68.71, y: 1.74, z: 22.02}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4786933700439544}
@@ -1550,6 +1552,101 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &82380025532503742
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425505682345718}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &95821339642629424
 Animator:
   serializedVersion: 3
@@ -1579,6 +1676,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac71bbe92f45624e8a20ebe032b0505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114286986807872648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425505682345718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5563cee28fc8f44db8add8733cacb7a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenScreams: 3
+  screamClips:
+  - {fileID: 8300000, guid: 8af8ba7240f6bf64ab19ff99ce4cc8f3, type: 3}
+  - {fileID: 8300000, guid: 1a9960537a26fa745bcebed505823e1e, type: 3}
+  - {fileID: 8300000, guid: a54d4bac1612a814c8ff66b67fe05446, type: 3}
+  source: {fileID: 82380025532503742}
 --- !u!114 &114367883098038762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1712,6 +1826,22 @@ MonoBehaviour:
   burnLevel: 0
   isInSun: 1
   State: 2
+  StateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114286986807872648}
+        m_MethodName: OnNPCStateChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114915594492966788
 MonoBehaviour:
   m_ObjectHideFlags: 1

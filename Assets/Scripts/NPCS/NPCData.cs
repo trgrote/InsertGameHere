@@ -44,4 +44,6 @@ public class NPCData : MonoBehaviour
 	public eState State = eState.Idle;
 
 	public StateMachine<eState, eTrigger> _sm;
+
+	public UnityEvent StateChanged;
 }
