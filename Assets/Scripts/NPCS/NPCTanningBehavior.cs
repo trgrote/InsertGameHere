@@ -38,7 +38,7 @@ public class NPCTanningBehavior : MonoBehaviour
 		}
 		else
 		{
-			currentTimeInSun = 0f;
+			currentTimeInSun = Mathf.Max(currentTimeInSun - Time.deltaTime, 0f);
 		}
 	}
 }
