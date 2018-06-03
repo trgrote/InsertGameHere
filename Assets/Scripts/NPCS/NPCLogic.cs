@@ -16,6 +16,11 @@ public class NPCLogic : MonoBehaviour
 	[SerializeField, Tooltip("How close we should be to say we've reached the interest")]
 	float interestCloseValue = 10f;
 
+	[SerializeField]
+	float walkingSpeed;
+	[SerializeField]
+	float runningSpeed = 15;
+
 	[Header("Tag References")]
 	[SerializeField, TagSelector] string interestTag;
 	[SerializeField, TagSelector] string fireExitTag;
@@ -58,6 +63,17 @@ public class NPCLogic : MonoBehaviour
 			.OnEntry(StopAgent)
 			.Permit(NPCData.eTrigger.StopDrag, NPCData.eState.Idle);
 
+		// Define Leaving State
+		data._sm.Configure(NPCData.eState.Leaving)
+			.OnEntry(SetAgentRunningSpeed);
+		{
+			data._sm.Configure(NPCData.eState.OnFire).SubstateOf(NPCData.eState.Leaving)
+				.OnEntry(FindNearestFireTarget);
+
+			data._sm.Configure(NPCData.eState.Tanned).SubstateOf(NPCData.eState.Leaving)
+				.OnEntry(FindNearestTannedTarget);
+		}
+
 		// Fake a reached interest call at the begining to restimulate idle
 		data._sm.Fire(NPCData.eTrigger.ReachedInterest);
 	}
@@ -66,6 +82,73 @@ public class NPCLogic : MonoBehaviour
 	{
 		agent.isStopped = true;
 	}
+
+	void SetAgentRunningSpeed()
+	{
+		agent.speed = runningSpeed;
+	}
+
+	#region Finding Items with Tags
+
+	void FindNearestFireTarget()
+	{
+		Vector3 dest = new Vector3();
+		if (FindRandomObjectWithTag(fireExitTag, out dest))
+		{
+			agent.destination = dest;
+			agent.isStopped = false;
+		}
+		else
+		{
+			Debug.LogWarning("Can't find fire exit");
+		}
+	}
+
+	void FindNearestTannedTarget()
+	{
+		Vector3 dest = new Vector3();
+		if (FindRandomObjectWithTag(tannedExitTag, out dest))
+		{
+			agent.destination = dest;
+			agent.isStopped = false;
+		}
+		else
+		{
+			Debug.LogWarning("Can't find tanned exit");
+		}
+	}
+
+	// Helper function for finding a random item with a tag
+	bool FindRandomObjectWithTag(string tag, out Vector3 destination)
+	{
+		var objs = GameObject.FindGameObjectsWithTag(tag);
+		destination = Vector3.zero;
+
+		if (objs.Length > 0)
+		{
+			var rand = objs[Random.Range(0, objs.Length)];
+			destination = rand.transform.position;
+			return true;
+		}
+
+		return false;
+	}
+
+	void FindInterest()
+	{
+		Vector3 dest = new Vector3();
+		if (FindRandomObjectWithTag(interestTag, out dest))
+		{
+			agent.destination = dest;
+			agent.isStopped = false;
+		}
+		else
+		{
+			Debug.LogWarning("Can't find interesting thing");
+		}
+	}
+
+	#endregion
 
 	#region Walking to Interest
 
@@ -93,17 +176,7 @@ public class NPCLogic : MonoBehaviour
 		data._sm.Fire(NPCData.eTrigger.ReachedInterest);
 	}
 
-	void FindInterest()
-	{
-		var objs = GameObject.FindGameObjectsWithTag(interestTag);
 
-		if (objs.Length > 0)
-		{
-			var rand = objs[Random.Range(0, objs.Length)];
-			agent.destination = rand.transform.position;
-			agent.isStopped = false;
-		}		
-	}
 
 	#endregion
 

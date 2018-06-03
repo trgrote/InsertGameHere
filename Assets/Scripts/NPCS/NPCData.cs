@@ -25,8 +25,9 @@ public class NPCData : MonoBehaviour
 			Idle, // just chilling
 			WalkingToInterest,
 		BeingDragged,
-		OnFire,
-		Tanned
+		Leaving,
+			OnFire,
+			Tanned
 	}
 
 	public enum eTrigger
