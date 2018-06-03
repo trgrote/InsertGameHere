@@ -39,38 +39,47 @@ public class NPCLogic : MonoBehaviour
 			() => data.State, 
 			s => data.State = s);
 
-		data._sm.Configure(NPCData.eState.Draggable)
-			.Permit(NPCData.eTrigger.BegunDrag, NPCData.eState.BeingDragged);
+		data._sm.Configure(NPCData.eState.Tanning)
+			.Permit(NPCData.eTrigger.CatchFire, NPCData.eState.OnFire)
+			.Permit(NPCData.eTrigger.CompleteTan, NPCData.eState.Tanned);
 		{
-			data._sm.Configure(NPCData.eState.Idle)
-				.SubstateOf(NPCData.eState.Draggable)
-				.OnEntry(StartCountDownToWalkToInterest)
-				.OnExit(StopCountDownToWalkToInterest)
-				.Permit(NPCData.eTrigger.WalkToInterest, NPCData.eState.WalkingToInterest)
-				.PermitReentry(NPCData.eTrigger.ReachedInterest);
-
-			data._sm.Configure(NPCData.eState.WalkingToInterest)
-				.SubstateOf(NPCData.eState.Draggable)
-				.OnEntry(FindInterest)
-				.OnEntry(StartWaitToReachInterest)
-				.OnExit(StopWaitToReachInterest)
-				.Permit(NPCData.eTrigger.ReachedInterest, NPCData.eState.Idle)
+			data._sm.Configure(NPCData.eState.Draggable)
+				.SubstateOf(NPCData.eState.Tanning)
 				.Permit(NPCData.eTrigger.BegunDrag, NPCData.eState.BeingDragged);
-		}
+			{
+				data._sm.Configure(NPCData.eState.Idle)
+					.SubstateOf(NPCData.eState.Draggable)
+					.OnEntry(StartCountDownToWalkToInterest)
+					.OnExit(StopCountDownToWalkToInterest)
+					.Permit(NPCData.eTrigger.WalkToInterest, NPCData.eState.WalkingToInterest)
+					.PermitReentry(NPCData.eTrigger.ReachedInterest);
 
-		data._sm.Configure(NPCData.eState.BeingDragged)
-			.Ignore(NPCData.eTrigger.BegunDrag)
-			.OnEntry(StopAgent)
-			.Permit(NPCData.eTrigger.StopDrag, NPCData.eState.Idle);
+				data._sm.Configure(NPCData.eState.WalkingToInterest)
+					.SubstateOf(NPCData.eState.Draggable)
+					.OnEntry(FindInterest)
+					.OnEntry(StartWaitToReachInterest)
+					.OnExit(StopWaitToReachInterest)
+					.Permit(NPCData.eTrigger.ReachedInterest, NPCData.eState.Idle)
+					.Permit(NPCData.eTrigger.BegunDrag, NPCData.eState.BeingDragged);
+			}
+
+			data._sm.Configure(NPCData.eState.BeingDragged)
+				.SubstateOf(NPCData.eState.Tanning)
+				.Ignore(NPCData.eTrigger.BegunDrag)
+				.OnEntry(StopAgent)
+				.Permit(NPCData.eTrigger.StopDrag, NPCData.eState.Idle);
+		}
 
 		// Define Leaving State
 		data._sm.Configure(NPCData.eState.Leaving)
 			.OnEntry(SetAgentRunningSpeed);
 		{
-			data._sm.Configure(NPCData.eState.OnFire).SubstateOf(NPCData.eState.Leaving)
+			data._sm.Configure(NPCData.eState.OnFire)
+				.SubstateOf(NPCData.eState.Leaving)
 				.OnEntry(FindNearestFireTarget);
 
-			data._sm.Configure(NPCData.eState.Tanned).SubstateOf(NPCData.eState.Leaving)
+			data._sm.Configure(NPCData.eState.Tanned)
+				.SubstateOf(NPCData.eState.Leaving)
 				.OnEntry(FindNearestTannedTarget);
 		}
 

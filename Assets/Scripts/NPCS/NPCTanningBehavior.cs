@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,10 +30,14 @@ public class NPCTanningBehavior : MonoBehaviour
 
 	void Update()
 	{
+		if (!data._sm.IsInState(NPCData.eState.Tanning)) return;
+
 		if (data.isInSun)
 		{
 			data.tanLevel += tanningRate * Time.deltaTime;
 			data.burnLevel += burnRate * Time.deltaTime;
+
+			CheckForTanOrBurn();
 
 			currentTimeInSun += Time.deltaTime;
 		}
@@ -41,4 +46,17 @@ public class NPCTanningBehavior : MonoBehaviour
 			currentTimeInSun = Mathf.Max(currentTimeInSun - Time.deltaTime, 0f);
 		}
 	}
+
+	// Send Events if we've reached our max
+    private void CheckForTanOrBurn()
+    {
+		if (data.burnLevel > NPCData.maxBurnValue)
+		{
+			data._sm.Fire(NPCData.eTrigger.CatchFire);
+		}
+		else if (data.tanLevel > NPCData.maxTanValue)
+		{
+			data._sm.Fire(NPCData.eTrigger.CompleteTan);
+		}
+    }
 }

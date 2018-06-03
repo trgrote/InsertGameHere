@@ -7,24 +7,24 @@ using UnityEngine.Events;
 // Just the facts about this NPC
 public class NPCData : MonoBehaviour 
 {
-	// Silly Delegate prototype
-	public delegate void OnFieldChanged();
-
-	[HideInInspector]
+	public const float maxTanValue = 50f;
+	// [HideInInspector]
 	public float tanLevel = 0f;
 
-	[HideInInspector]
+	public const float maxBurnValue = 50f;
+	// [HideInInspector]
 	public float burnLevel = 0f;
 
-	[HideInInspector]
+	// [HideInInspector]
 	public bool isInSun = true;
 
 	public enum eState
 	{
-		Draggable,
-			Idle, // just chilling
-			WalkingToInterest,
-		BeingDragged,
+		Tanning,
+			Draggable,
+				Idle, // just chilling
+				WalkingToInterest,
+			BeingDragged,
 		Leaving,
 			OnFire,
 			Tanned
