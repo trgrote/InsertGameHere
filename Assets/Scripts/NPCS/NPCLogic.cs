@@ -16,6 +16,11 @@ public class NPCLogic : MonoBehaviour
 	[SerializeField, Tooltip("How close we should be to say we've reached the interest")]
 	float interestCloseValue = 10f;
 
+	[Header("Tag References")]
+	[SerializeField, TagSelector] string interestTag;
+	[SerializeField, TagSelector] string fireExitTag;
+	[SerializeField, TagSelector] string tannedExitTag;
+
 	NPCData data;
 
 	NavMeshAgent agent;
@@ -90,7 +95,7 @@ public class NPCLogic : MonoBehaviour
 
 	void FindInterest()
 	{
-		var objs = GameObject.FindGameObjectsWithTag("Interest");
+		var objs = GameObject.FindGameObjectsWithTag(interestTag);
 
 		if (objs.Length > 0)
 		{

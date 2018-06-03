@@ -678,11 +678,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114915594492966788, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: maxIdleTime
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 017d68f8fc24f4933b3ad226f3e3485c, type: 2}
   m_IsPrefabParent: 0

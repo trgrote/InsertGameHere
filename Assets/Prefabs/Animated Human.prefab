@@ -1670,6 +1670,9 @@ MonoBehaviour:
   interestCloseValue: 10
   walkingSpeed: 0
   runningSpeed: 15
+  interestTag: Interest
+  fireExitTag: OnFireExit
+  tannedExitTag: TannedExit
 --- !u!136 &136174429733882482
 CapsuleCollider:
   m_ObjectHideFlags: 1
