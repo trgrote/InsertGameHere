@@ -7,26 +7,27 @@ using UnityEngine.Events;
 // Just the facts about this NPC
 public class NPCData : MonoBehaviour 
 {
-	// Silly Delegate prototype
-	public delegate void OnFieldChanged();
-
-	[HideInInspector]
+	public const float maxTanValue = 50f;
+	// [HideInInspector]
 	public float tanLevel = 0f;
 
-	[HideInInspector]
+	public const float maxBurnValue = 50f;
+	// [HideInInspector]
 	public float burnLevel = 0f;
 
-	[HideInInspector]
+	// [HideInInspector]
 	public bool isInSun = true;
 
 	public enum eState
 	{
-		Draggable,
-			Idle, // just chilling
-			WalkingToInterest,
-		BeingDragged,
-		OnFire,
-		Tanned
+		Tanning,
+			Draggable,
+				Idle, // just chilling
+				WalkingToInterest,
+			BeingDragged,
+		Leaving,
+			OnFire,
+			Tanned
 	}
 
 	public enum eTrigger
@@ -34,26 +35,13 @@ public class NPCData : MonoBehaviour
 		WalkToInterest,
 		ReachedInterest,
 		BegunDrag,
-		StopDrag
+		StopDrag,
+		CatchFire,
+		CompleteTan
 	}
 
 	// TODO Make this HideInInspector
 	public eState State = eState.Idle;
 
 	public StateMachine<eState, eTrigger> _sm;
-
-	public bool isBeingDragged
-	{
-		get
-		{
-			return _sm.IsInState(eState.BeingDragged);
-		}
-		set
-		{
-			if (value)
-				_sm.Fire(eTrigger.BegunDrag);
-			else
-				_sm.Fire(eTrigger.StopDrag);
-		}
-	}
 }

@@ -44,5 +44,5 @@ Session.vim
 # temporary
 .netrwhist
 *~
-tags*
+tags
 .vscode/launch.json

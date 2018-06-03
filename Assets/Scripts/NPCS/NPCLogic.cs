@@ -16,6 +16,16 @@ public class NPCLogic : MonoBehaviour
 	[SerializeField, Tooltip("How close we should be to say we've reached the interest")]
 	float interestCloseValue = 10f;
 
+	[SerializeField]
+	float walkingSpeed;
+	[SerializeField]
+	float runningSpeed = 15;
+
+	[Header("Tag References")]
+	[SerializeField, TagSelector] string interestTag;
+	[SerializeField, TagSelector] string fireExitTag;
+	[SerializeField, TagSelector] string tannedExitTag;
+
 	NPCData data;
 
 	NavMeshAgent agent;
@@ -29,29 +39,49 @@ public class NPCLogic : MonoBehaviour
 			() => data.State, 
 			s => data.State = s);
 
-		data._sm.Configure(NPCData.eState.Draggable)
-			.Permit(NPCData.eTrigger.BegunDrag, NPCData.eState.BeingDragged);
+		data._sm.Configure(NPCData.eState.Tanning)
+			.Permit(NPCData.eTrigger.CatchFire, NPCData.eState.OnFire)
+			.Permit(NPCData.eTrigger.CompleteTan, NPCData.eState.Tanned);
 		{
-			data._sm.Configure(NPCData.eState.Idle)
-				.SubstateOf(NPCData.eState.Draggable)
-				.OnEntry(StartCountDownToWalkToInterest)
-				.OnExit(StopCountDownToWalkToInterest)
-				.Permit(NPCData.eTrigger.WalkToInterest, NPCData.eState.WalkingToInterest)
-				.PermitReentry(NPCData.eTrigger.ReachedInterest);
-
-			data._sm.Configure(NPCData.eState.WalkingToInterest)
-				.SubstateOf(NPCData.eState.Draggable)
-				.OnEntry(FindInterest)
-				.OnEntry(StartWaitToReachInterest)
-				.OnExit(StopWaitToReachInterest)
-				.Permit(NPCData.eTrigger.ReachedInterest, NPCData.eState.Idle)
+			data._sm.Configure(NPCData.eState.Draggable)
+				.SubstateOf(NPCData.eState.Tanning)
 				.Permit(NPCData.eTrigger.BegunDrag, NPCData.eState.BeingDragged);
+			{
+				data._sm.Configure(NPCData.eState.Idle)
+					.SubstateOf(NPCData.eState.Draggable)
+					.OnEntry(StartCountDownToWalkToInterest)
+					.OnExit(StopCountDownToWalkToInterest)
+					.Permit(NPCData.eTrigger.WalkToInterest, NPCData.eState.WalkingToInterest)
+					.PermitReentry(NPCData.eTrigger.ReachedInterest);
+
+				data._sm.Configure(NPCData.eState.WalkingToInterest)
+					.SubstateOf(NPCData.eState.Draggable)
+					.OnEntry(FindInterest)
+					.OnEntry(StartWaitToReachInterest)
+					.OnExit(StopWaitToReachInterest)
+					.Permit(NPCData.eTrigger.ReachedInterest, NPCData.eState.Idle)
+					.Permit(NPCData.eTrigger.BegunDrag, NPCData.eState.BeingDragged);
+			}
+
+			data._sm.Configure(NPCData.eState.BeingDragged)
+				.SubstateOf(NPCData.eState.Tanning)
+				.Ignore(NPCData.eTrigger.BegunDrag)
+				.OnEntry(StopAgent)
+				.Permit(NPCData.eTrigger.StopDrag, NPCData.eState.Idle);
 		}
 
-		data._sm.Configure(NPCData.eState.BeingDragged)
-			.Ignore(NPCData.eTrigger.BegunDrag)
-			.OnEntry(StopAgent)
-			.Permit(NPCData.eTrigger.StopDrag, NPCData.eState.Idle);
+		// Define Leaving State
+		data._sm.Configure(NPCData.eState.Leaving)
+			.OnEntry(SetAgentRunningSpeed);
+		{
+			data._sm.Configure(NPCData.eState.OnFire)
+				.SubstateOf(NPCData.eState.Leaving)
+				.OnEntry(FindNearestFireTarget);
+
+			data._sm.Configure(NPCData.eState.Tanned)
+				.SubstateOf(NPCData.eState.Leaving)
+				.OnEntry(FindNearestTannedTarget);
+		}
 
 		// Fake a reached interest call at the begining to restimulate idle
 		data._sm.Fire(NPCData.eTrigger.ReachedInterest);
@@ -61,6 +91,73 @@ public class NPCLogic : MonoBehaviour
 	{
 		agent.isStopped = true;
 	}
+
+	void SetAgentRunningSpeed()
+	{
+		agent.speed = runningSpeed;
+	}
+
+	#region Finding Items with Tags
+
+	void FindNearestFireTarget()
+	{
+		Vector3 dest = new Vector3();
+		if (FindRandomObjectWithTag(fireExitTag, out dest))
+		{
+			agent.destination = dest;
+			agent.isStopped = false;
+		}
+		else
+		{
+			Debug.LogWarning("Can't find fire exit");
+		}
+	}
+
+	void FindNearestTannedTarget()
+	{
+		Vector3 dest = new Vector3();
+		if (FindRandomObjectWithTag(tannedExitTag, out dest))
+		{
+			agent.destination = dest;
+			agent.isStopped = false;
+		}
+		else
+		{
+			Debug.LogWarning("Can't find tanned exit");
+		}
+	}
+
+	// Helper function for finding a random item with a tag
+	bool FindRandomObjectWithTag(string tag, out Vector3 destination)
+	{
+		var objs = GameObject.FindGameObjectsWithTag(tag);
+		destination = Vector3.zero;
+
+		if (objs.Length > 0)
+		{
+			var rand = objs[Random.Range(0, objs.Length)];
+			destination = rand.transform.position;
+			return true;
+		}
+
+		return false;
+	}
+
+	void FindInterest()
+	{
+		Vector3 dest = new Vector3();
+		if (FindRandomObjectWithTag(interestTag, out dest))
+		{
+			agent.destination = dest;
+			agent.isStopped = false;
+		}
+		else
+		{
+			Debug.LogWarning("Can't find interesting thing");
+		}
+	}
+
+	#endregion
 
 	#region Walking to Interest
 
@@ -88,17 +185,7 @@ public class NPCLogic : MonoBehaviour
 		data._sm.Fire(NPCData.eTrigger.ReachedInterest);
 	}
 
-	void FindInterest()
-	{
-		var objs = GameObject.FindGameObjectsWithTag("Interest");
 
-		if (objs.Length > 0)
-		{
-			var rand = objs[Random.Range(0, objs.Length)];
-			agent.destination = rand.transform.position;
-			agent.isStopped = false;
-		}		
-	}
 
 	#endregion
 

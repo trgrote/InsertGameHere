@@ -1698,7 +1698,7 @@ MonoBehaviour:
   tanLevel: 0
   burnLevel: 0
   isInSun: 1
-  State: 1
+  State: 2
 --- !u!114 &114915594492966788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1711,8 +1711,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minIdleTime: 1
-  maxIdleTime: 10
+  maxIdleTime: 3
   interestCloseValue: 10
+  walkingSpeed: 10
+  runningSpeed: 15
+  interestTag: Interest
+  fireExitTag: OnFireExit
+  tannedExitTag: TannedExit
 --- !u!136 &136174429733882482
 CapsuleCollider:
   m_ObjectHideFlags: 1
