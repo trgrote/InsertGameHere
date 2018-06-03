@@ -155,7 +155,7 @@ public class NPCLogic : MonoBehaviour
 	bool FindRandomObjectWithTag(string tag, out Vector3 destination)
 	{
 		var objs = GameObject.FindGameObjectsWithTag(tag);
-		destination = Vector3.zero;
+		destination = transform.position;
 
 		if (objs.Length > 0)
 		{

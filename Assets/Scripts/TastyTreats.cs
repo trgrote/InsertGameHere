@@ -45,6 +45,6 @@ public class TastyTreats : MonoBehaviour {
         float movementFactor = rawSinWave / 2f + 0.5f; // halve amplitude, shift up. aka 0 to +1
 
         Vector3 offset = new Vector3(0, movementFactor * bobHeight, 0);
-        transform.position = startingPosition + offset;
+        transform.localPosition = startingPosition + offset;
     }
 }
