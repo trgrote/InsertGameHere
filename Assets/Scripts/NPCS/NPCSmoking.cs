@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPCSmoking : MonoBehaviour {
 
 	[SerializeField] ParticleSystem smoke;
+	[SerializeField] float smokeBurnThreshold = 80f;
 	private NPCData data;
 
 	// Use this for initialization
@@ -15,8 +16,12 @@ public class NPCSmoking : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (smoke.isPlaying) {
-			if (data.burnLevel < 80f) {
-				smoke.Pause();
+			if (data.burnLevel < smokeBurnThreshold) {
+				smoke.Stop();
+			}
+		} else {
+			if (data.burnLevel >= smokeBurnThreshold) {
+				smoke.Play();
 			}
 		}
 	}
