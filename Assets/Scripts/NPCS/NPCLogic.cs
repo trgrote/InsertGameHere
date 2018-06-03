@@ -76,11 +76,13 @@ public class NPCLogic : MonoBehaviour
 		{
 			data._sm.Configure(NPCData.eState.OnFire)
 				.SubstateOf(NPCData.eState.Leaving)
-				.OnEntry(FindNearestFireTarget);
+				.OnEntry(FindNearestFireTarget)
+				.OnEntry(() => rho.GlobalEventHandler.SendEvent(new NPCLeft{onFire = true}));
 
 			data._sm.Configure(NPCData.eState.Tanned)
 				.SubstateOf(NPCData.eState.Leaving)
-				.OnEntry(FindNearestTannedTarget);
+				.OnEntry(FindNearestTannedTarget)
+				.OnEntry(() => rho.GlobalEventHandler.SendEvent(new NPCLeft{onFire = false}));
 		}
 
 		// Fake a reached interest call at the begining to restimulate idle
