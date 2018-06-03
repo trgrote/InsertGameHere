@@ -7,11 +7,11 @@ using UnityEngine.Events;
 // Just the facts about this NPC
 public class NPCData : MonoBehaviour 
 {
-	public const float maxTanValue = 50f;
+	public const float maxTanValue = 100f;
 	// [HideInInspector]
 	public float tanLevel = 0f;
 
-	public const float maxBurnValue = 50f;
+	public const float maxBurnValue = 100f;
 	// [HideInInspector]
 	public float burnLevel = 0f;
 

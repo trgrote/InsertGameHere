@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(NPCData))]
 public class NPCTanningBehavior : MonoBehaviour 
 {
-	public float tanningRate = 0.1f;  // per second
+	public float tanningRate = 0.2f;  // per second
 
 	private float currentTimeInSun = 0f;
 

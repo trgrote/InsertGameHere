@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPCSmoking : MonoBehaviour {
 
 	[SerializeField] ParticleSystem smoke;
-	[SerializeField] float smokeBurnThreshold = 80f;
+	[SerializeField] [Range(0f,100f)] float smokeBurnThreshold = 80f;
 	private NPCData data;
 
 	// Use this for initialization
