@@ -50,10 +50,16 @@ public class NPCLogic : MonoBehaviour
 
 		data._sm.Configure(NPCData.eState.BeingDragged)
 			.Ignore(NPCData.eTrigger.BegunDrag)
+			.OnEntry(StopAgent)
 			.Permit(NPCData.eTrigger.StopDrag, NPCData.eState.Idle);
 
 		// Fake a reached interest call at the begining to restimulate idle
 		data._sm.Fire(NPCData.eTrigger.ReachedInterest);
+	}
+
+	void StopAgent()
+	{
+		agent.isStopped = true;
 	}
 
 	#region Walking to Interest

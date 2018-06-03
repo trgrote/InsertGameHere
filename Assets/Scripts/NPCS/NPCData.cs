@@ -37,6 +37,7 @@ public class NPCData : MonoBehaviour
 		StopDrag
 	}
 
+	// TODO Make this HideInInspector
 	public eState State = eState.Idle;
 
 	public StateMachine<eState, eTrigger> _sm;
