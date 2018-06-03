@@ -5,12 +5,13 @@ using UnityEngine;
 public class DieAfterTime : MonoBehaviour 
 {
 
-	[SerializeField] float timeTillDeath = 10f;
+	[SerializeField] float minTimeTillDeath = 7f;
+	[SerializeField] float maxTimeTillDeath = 14f;
 
 	// Use this for initialization
 	IEnumerator Start () 
 	{
-		yield return new WaitForSeconds(timeTillDeath);
+		yield return new WaitForSeconds(Random.Range(minTimeTillDeath, maxTimeTillDeath));
 		Destroy(gameObject);
 	}
 }

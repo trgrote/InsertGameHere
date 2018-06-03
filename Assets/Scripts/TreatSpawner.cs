@@ -7,38 +7,31 @@ public class TreatSpawner : MonoBehaviour {
 	// Use this for initialization
 	[SerializeField] GameObject[] treatPrefabs;
 
-	[SerializeField] float timeBetweenSpawn = 10f;
+	[SerializeField] float minBetweenSpawn = 10f;
+	[SerializeField] float maxTimeBetweenSpawn = 15f;
 	// [SerializeField] float spawnSquareRadius = 10f;
 	// [SerializeField] float spawnHeight = 3f;
 	// [SerializeField] int maxTreats = 5;
 
+	GameObject currentTreat;
+
 	public void Spawn()
-	{
-		// Vector3 relativeSpawnLocation = new Vector3(
-		// 	(Random.value - 0.5f) * spawnSquareRadius,
-		// 	spawnHeight,
-		// 	(Random.value - 0.5f) * spawnSquareRadius);
-		
-		// Instantiate(treatPrefabs[UnityEngine.Random.Range(0, treatPrefabs.Length)],
-		// relativeSpawnLocation + transform.position,
-		// Quaternion.identity);
-		
-		Instantiate(treatPrefabs[UnityEngine.Random.Range(0, treatPrefabs.Length)],
-		transform.position,
-		Quaternion.identity);
+	{		
+		currentTreat = Instantiate(treatPrefabs[UnityEngine.Random.Range(0, treatPrefabs.Length)],
+			transform.position,
+			Quaternion.identity);
 	}
 
-	void Start()
+	IEnumerator Start()
 	{
-		StartCoroutine(ConstantSpawn());
-	}
-
-	IEnumerator ConstantSpawn()
-	{
+		// Stagger the spawn start so not all of them start at once
+		yield return new WaitForSeconds(Random.Range(0f, 3f));
 		while (true)
 		{
 			Spawn();
-			yield return new WaitForSeconds(timeBetweenSpawn);
+			yield return new WaitForSeconds(Random.Range(minBetweenSpawn, maxTimeBetweenSpawn));
+			Destroy(currentTreat);
+			yield return new WaitForSeconds(Random.Range(minBetweenSpawn, maxTimeBetweenSpawn));
 		}
 	}
 }
