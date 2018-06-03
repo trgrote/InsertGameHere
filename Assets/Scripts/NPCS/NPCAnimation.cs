@@ -23,7 +23,6 @@ public class NPCAnimation : MonoBehaviour
 
         // Update animation parameters
         anim.SetBool("move", shouldMove);
-        anim.SetFloat ("velx", velocity.x);
-        anim.SetFloat ("vely", velocity.y);
+        anim.SetFloat("speed", velocity.magnitude);
     }
 }

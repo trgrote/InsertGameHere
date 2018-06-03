@@ -1666,8 +1666,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minIdleTime: 1
-  maxIdleTime: 10
+  maxIdleTime: 3
   interestCloseValue: 10
+  walkingSpeed: 0
+  runningSpeed: 15
 --- !u!136 &136174429733882482
 CapsuleCollider:
   m_ObjectHideFlags: 1
