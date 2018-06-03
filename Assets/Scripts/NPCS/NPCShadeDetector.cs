@@ -5,10 +5,9 @@ using UnityEngine;
 public class NPCShadeDetector : MonoBehaviour {
 	private NPCData data;
 	void OnTriggerStay(Collider other) {
-		print("Triggered");
-		if (other.tag == "Shade")
-			print("shade bb");
+		if (other.tag == "Shade") {
 			data.isInSun = false;
+		}
 	}
 	
 	void OnTriggerExit(Collider other) {
