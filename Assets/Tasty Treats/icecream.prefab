@@ -85,6 +85,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4385755649641120}
+  - component: {fileID: 114730555647752762}
   m_Layer: 0
   m_Name: icecream
   m_TagString: Untagged
@@ -117,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1157519503278448}
   m_LocalRotation: {x: 0.031171914, y: 0.04155061, z: -0.0012969578, w: 0.99864924}
-  m_LocalPosition: {x: -0.829, y: 0, z: 0}
+  m_LocalPosition: {x: -0.34300005, y: 0.31000012, z: -0.000000033313274}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4299423029208938}
@@ -131,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1897380035764282}
   m_LocalRotation: {x: -0.027322555, y: -0, z: -0, w: 0.99962676}
-  m_LocalPosition: {x: -0.45376292, y: -0.673, z: -0}
+  m_LocalPosition: {x: 0.032237012, y: -0.36299986, z: -0.000000033313274}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4950390872790178}
@@ -158,8 +159,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1711338341526228}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 50.6, y: 28.09058, z: -60}
-  m_LocalScale: {x: 0.6611365, y: 0.66113675, z: 0.66113675}
+  m_LocalPosition: {x: 16.581001, y: 20.25, z: -48.864}
+  m_LocalScale: {x: 1.5655646, y: 1.5655642, z: 1.5655642}
   m_Children:
   - {fileID: 4766816386748044}
   - {fileID: 4113822591720410}
@@ -174,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1352162352020638}
   m_LocalRotation: {x: 0.027315255, y: -0.05397374, z: 0.0014770047, w: 0.99816763}
-  m_LocalPosition: {x: -0.026, y: 0, z: 0}
+  m_LocalPosition: {x: 0.46, y: 0.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4385755649641120}
@@ -373,3 +374,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114730555647752762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711338341526228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ba290a9c16eb84ebb4c190b8adbc11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeedPerSecond: 40
+  bobHeight: 1.5
+  bobPeriod: 3
