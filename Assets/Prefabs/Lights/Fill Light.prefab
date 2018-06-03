@@ -9,53 +9,53 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1085651224991340}
+  m_RootGameObject: {fileID: 1492563911263938}
   m_IsPrefabParent: 1
---- !u!1 &1085651224991340
+--- !u!1 &1492563911263938
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4227219504927588}
-  - component: {fileID: 108376279842237492}
+  - component: {fileID: 4129048987033128}
+  - component: {fileID: 108036030745757214}
   m_Layer: 0
-  m_Name: Sun
+  m_Name: Fill Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4227219504927588
+--- !u!4 &4129048987033128
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1085651224991340}
-  m_LocalRotation: {x: 0.30550227, y: 0.62623394, z: -0.29201728, w: 0.655153}
-  m_LocalPosition: {x: -28.8, y: 75.2, z: 67.1}
+  m_GameObject: {fileID: 1492563911263938}
+  m_LocalRotation: {x: -0.14875308, y: 0.23710516, z: -0.2058906, w: -0.93769014}
+  m_LocalPosition: {x: 161.1, y: 75.2, z: 67.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50.000004, y: 87.414, z: 0}
---- !u!108 &108376279842237492
+  m_LocalEulerAnglesHint: {x: 22.123001, y: 335.551, z: 19.917002}
+--- !u!108 &108036030745757214
 Light:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1085651224991340}
+  m_GameObject: {fileID: 1492563911263938}
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.9948113, b: 0.9481132, a: 1}
-  m_Intensity: 1.53
+  m_Color: {r: 0.6462264, g: 0.67262745, b: 1, a: 1}
+  m_Intensity: 0.73
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
