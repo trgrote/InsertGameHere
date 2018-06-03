@@ -1347,6 +1347,48 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 460750, guid: d2104aa152d99894d8df3c31a9ee634b, type: 2}
   m_PrefabInternal: {fileID: 1612704385}
+--- !u!1001 &1261637054
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4917742063785988, guid: d189a88415a984230aad2c101f8ac2d3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 26.4765
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917742063785988, guid: d189a88415a984230aad2c101f8ac2d3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.1713562
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917742063785988, guid: d189a88415a984230aad2c101f8ac2d3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 21.887506
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917742063785988, guid: d189a88415a984230aad2c101f8ac2d3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917742063785988, guid: d189a88415a984230aad2c101f8ac2d3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917742063785988, guid: d189a88415a984230aad2c101f8ac2d3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917742063785988, guid: d189a88415a984230aad2c101f8ac2d3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917742063785988, guid: d189a88415a984230aad2c101f8ac2d3, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d189a88415a984230aad2c101f8ac2d3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1273416259 stripped
 Transform:
   m_PrefabParentObject: {fileID: 460750, guid: d2104aa152d99894d8df3c31a9ee634b, type: 2}
