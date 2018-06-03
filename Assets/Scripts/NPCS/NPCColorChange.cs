@@ -21,7 +21,6 @@ public class NPCColorChange : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-
         ApplyColor();
     }
 
@@ -37,7 +36,7 @@ public class NPCColorChange : MonoBehaviour {
 
     private Color CombinedColor() {
 		float tanFactor = data.tanLevel / 100f;
-		// float burnFactor = data.burnLevel / 100f;
+		float burnFactor = data.burnLevel / 100f;
 		return BurnGradient.Evaluate(burnFactor) * TanGradient.Evaluate(tanFactor);
 	}
 }
