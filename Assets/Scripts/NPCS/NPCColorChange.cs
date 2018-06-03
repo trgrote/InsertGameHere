@@ -9,12 +9,12 @@ public class NPCColorChange : MonoBehaviour {
 
 	// [SerializeField] [Range(0,1)] float tanFactor = 0f;
 	// [SerializeField] [Range(0,1)] float burnFactor = 0f;
-	private Renderer renderer;
+	private Renderer rend;
 	private NPCData data;
 
 	// Use this for initialization
 	void Start () {
-		renderer = GetComponent<Renderer>();
+		rend = GetComponent<Renderer>();
 		data = transform.parent.GetComponent<NPCData>();
 	}
 	
@@ -28,10 +28,10 @@ public class NPCColorChange : MonoBehaviour {
     {
         Color combinedColor = CombinedColor();
 
-        renderer.material.shader = Shader.Find("_Color");
-        renderer.material.SetColor("_Color", combinedColor);
-        renderer.material.shader = Shader.Find("Specular");
-        renderer.material.SetColor("_SpecColor", new Color(0, 0, 0, 0));
+        rend.material.shader = Shader.Find("_Color");
+        rend.material.SetColor("_Color", combinedColor);
+        rend.material.shader = Shader.Find("Specular");
+        rend.material.SetColor("_SpecColor", new Color(0, 0, 0, 0));
     }
 
     private Color CombinedColor() {
