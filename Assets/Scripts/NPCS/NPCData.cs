@@ -34,26 +34,13 @@ public class NPCData : MonoBehaviour
 		WalkToInterest,
 		ReachedInterest,
 		BegunDrag,
-		StopDrag
+		StopDrag,
+		CatchFire,
+		CompleteTan
 	}
 
 	// TODO Make this HideInInspector
 	public eState State = eState.Idle;
 
 	public StateMachine<eState, eTrigger> _sm;
-
-	public bool isBeingDragged
-	{
-		get
-		{
-			return _sm.IsInState(eState.BeingDragged);
-		}
-		set
-		{
-			if (value)
-				_sm.Fire(eTrigger.BegunDrag);
-			else
-				_sm.Fire(eTrigger.StopDrag);
-		}
-	}
 }
