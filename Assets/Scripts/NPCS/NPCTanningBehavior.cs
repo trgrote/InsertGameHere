@@ -13,6 +13,8 @@ public class NPCTanningBehavior : MonoBehaviour
 
 	public float burnAcceleration;  // burn/dt
 
+	public float decayMultiplier;
+
 	public float burnRate
 	{
 		get
@@ -43,7 +45,7 @@ public class NPCTanningBehavior : MonoBehaviour
 		}
 		else
 		{
-			currentTimeInSun = Mathf.Max(currentTimeInSun - Time.deltaTime, 0f);
+			currentTimeInSun = Mathf.Max(currentTimeInSun - Time.deltaTime * decayMultiplier, 0f);
 		}
 	}
 

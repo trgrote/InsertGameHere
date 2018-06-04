@@ -1590,8 +1590,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cb6e092343d4be9a90d53e6552318c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tanningRate: 2
-  burnAcceleration: 0.5
+  tanningRate: 4.01
+  burnAcceleration: 0.55
+  decayMultiplier: 2.01
 --- !u!114 &114376896911453164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1621,15 +1622,15 @@ MonoBehaviour:
     key2: {r: 1, g: 0.25882354, b: 0.41037738, a: 0}
     key3: {r: 0.5, g: 0, b: 0.3169148, a: 0}
     key4: {r: 0.33962262, g: 0, b: 0.25471696, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0.33962262, g: 0, b: 0.25471696, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 5397
-    ctime1: 24287
-    ctime2: 52428
+    ctime0: 19468
+    ctime1: 45296
+    ctime2: 53970
     ctime3: 60138
     ctime4: 65535
-    ctime5: 0
+    ctime5: 65535
     ctime6: 0
     ctime7: 0
     atime0: 0
