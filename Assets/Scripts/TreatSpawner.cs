@@ -25,7 +25,7 @@ public class TreatSpawner : MonoBehaviour {
 	IEnumerator Start()
 	{
 		// Stagger the spawn start so not all of them start at once
-		yield return new WaitForSeconds(Random.Range(0f, 3f));
+		yield return new WaitForSeconds(Random.Range(0f, 10f));
 		while (true)
 		{
 			Spawn();

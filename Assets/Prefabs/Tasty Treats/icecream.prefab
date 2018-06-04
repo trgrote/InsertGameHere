@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 114079250517721582}
   m_Layer: 0
   m_Name: icecream
-  m_TagString: Interest
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 4434611072353140}
   m_Layer: 0
   m_Name: icecream
-  m_TagString: Untagged
+  m_TagString: Interest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
