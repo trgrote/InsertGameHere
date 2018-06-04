@@ -1830,9 +1830,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cb6e092343d4be9a90d53e6552318c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tanningRate: 4.01
-  burnAcceleration: 0.75
-  decayMultiplier: 3.36
+  tanningRate: 3.56
+  burnAcceleration: 0.85
+  decayMultiplier: 2.49
 --- !u!114 &114376896911453164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2029,8 +2029,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab14dd9abeb174f4f9e74c8de0b7f914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minIdleTime: 1
-  maxIdleTime: 3
+  minIdleTime: 3.71
+  maxIdleTime: 4.7
   interestCloseValue: 10
   walkingSpeed: 10
   runningSpeed: 15

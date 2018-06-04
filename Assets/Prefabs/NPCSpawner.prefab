@@ -52,8 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1425505682345718, guid: 017d68f8fc24f4933b3ad226f3e3485c, type: 2}
-  startMinTimeBetweenSpawn: 10
-  startMaxTimeBetweenSpawn: 20
-  spawnTimeDecay: 0.041
+  startMinTimeBetweenSpawn: 13
+  startMaxTimeBetweenSpawn: 23
+  absoluteMinTimeBetweenSpawn: 0.9
+  spawnTimeDecay: 0.04
   minTimeBetweenSpawn: 0
   maxTimeBetweenSpawn: 0

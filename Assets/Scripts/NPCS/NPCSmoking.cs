@@ -18,13 +18,14 @@ public class NPCSmoking : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		bool shouldBeSmoking = data.burnLevel >= burnLevelThreshold && tanData.burnRate >= burnRateThreshold && !data._sm.IsInState(NPCData.eState.Tanned);
 
 		if (smoke.isPlaying) {
-			if (data.burnLevel < burnLevelThreshold || tanData.burnRate < burnRateThreshold) {
+			if (!shouldBeSmoking) {
 				smoke.Stop();
 			}
 		} else {
-			if (data.burnLevel >= burnLevelThreshold && tanData.burnRate >= burnRateThreshold) {
+			if (shouldBeSmoking) {
 				smoke.Play();
 			}
 		}

@@ -11,6 +11,8 @@ public class NPCSpawner : MonoBehaviour
 	[SerializeField] float startMinTimeBetweenSpawn = 10f;
 	[SerializeField] float startMaxTimeBetweenSpawn = 15f;
 
+	[SerializeField] float absoluteMinTimeBetweenSpawn = 1f;
+
 	[SerializeField] [Range(0,1)] float spawnTimeDecay = 0.02f;
 
 	
@@ -35,8 +37,8 @@ public class NPCSpawner : MonoBehaviour
 		{
 			Spawn();
 			yield return new WaitForSeconds(Random.Range(minTimeBetweenSpawn, maxTimeBetweenSpawn));
-			minTimeBetweenSpawn = minTimeBetweenSpawn * (1 - spawnTimeDecay);
-			maxTimeBetweenSpawn = maxTimeBetweenSpawn * (1 - spawnTimeDecay);
+			minTimeBetweenSpawn = Mathf.Max(minTimeBetweenSpawn * (1 - spawnTimeDecay), absoluteMinTimeBetweenSpawn);
+			maxTimeBetweenSpawn = Mathf.Max(maxTimeBetweenSpawn * (1 - spawnTimeDecay), absoluteMinTimeBetweenSpawn);
 		}
 	}
 }
