@@ -51,7 +51,7 @@ public class MouseDraggable : MonoBehaviour
 		// if (Physics.Raycast(ray, out hit))
 		if (Physics.Raycast(ray, out hit, 600.0f, TerrainLayerMask.value))
 			{
-				print(hit.collider);
+				// print(hit.collider);
 				if (hit.point != null) {
 					curPosition = hit.point;
 					transform.position = curPosition;

@@ -436,108 +436,88 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
         type: 2}
-      propertyPath: TanGradient.key1.r
-      value: 0.9716981
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.key1.g
-      value: 0.9029459
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.key1.b
-      value: 0.9029459
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.key2.r
-      value: 0.9629578
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.key2.g
-      value: 0.86008036
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.ctime1
-      value: 7517
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.ctime2
-      value: 32575
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.m_NumColorKeys
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.ctime0
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.key2.b
-      value: 0.80999553
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.key3.r
-      value: 0.8867924
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.key3.g
-      value: 0.4865382
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.ctime3
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.key0.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: TanGradient.key0.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114620699371754200, guid: 017d68f8fc24f4933b3ad226f3e3485c,
-        type: 2}
-      propertyPath: smokeBurnThreshold
-      value: 87.5
+      propertyPath: BurnGradient.ctime1
+      value: 45296
       objectReference: {fileID: 0}
     - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
         type: 2}
       propertyPath: BurnGradient.ctime0
-      value: 5397
+      value: 19468
       objectReference: {fileID: 0}
     - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
         type: 2}
-      propertyPath: BurnGradient.ctime1
-      value: 24287
+      propertyPath: BurnGradient.key2.g
+      value: 0.25882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.key2.b
+      value: 0.41037738
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.key3.r
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.key3.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.key3.b
+      value: 0.3169148
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.key4.r
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.key4.b
+      value: 0.25471696
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.key5.r
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.key5.b
+      value: 0.25471696
       objectReference: {fileID: 0}
     - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
         type: 2}
       propertyPath: BurnGradient.ctime2
-      value: 52428
+      value: 53970
       objectReference: {fileID: 0}
     - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
         type: 2}
       propertyPath: BurnGradient.ctime3
       value: 60138
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.ctime4
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.ctime5
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.m_NumColorKeys
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563136279471706, guid: 017d68f8fc24f4933b3ad226f3e3485c,
+        type: 2}
+      propertyPath: BurnGradient.key2.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 017d68f8fc24f4933b3ad226f3e3485c, type: 2}
@@ -1460,18 +1440,6 @@ Prefab:
     - target: {fileID: 4865034797128162, guid: 50fbbcb3525cc7d46975c1ae2d4faa9e, type: 2}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4865034797128162, guid: 50fbbcb3525cc7d46975c1ae2d4faa9e, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4.82445
-      objectReference: {fileID: 0}
-    - target: {fileID: 4865034797128162, guid: 50fbbcb3525cc7d46975c1ae2d4faa9e, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 4.82445
-      objectReference: {fileID: 0}
-    - target: {fileID: 4865034797128162, guid: 50fbbcb3525cc7d46975c1ae2d4faa9e, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4.82445
       objectReference: {fileID: 0}
     - target: {fileID: 1881653334462574, guid: 50fbbcb3525cc7d46975c1ae2d4faa9e, type: 2}
       propertyPath: m_Name

@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4920550240036222}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: shade zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 33863938001596890}
   - component: {fileID: 23688662095908558}
   - component: {fileID: 65822186839153896}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Shade
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 33359972763513830}
   - component: {fileID: 23701252357806230}
   - component: {fileID: 65500384744363410}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Shade
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 33291520954208858}
   - component: {fileID: 23811662928225274}
   - component: {fileID: 65817671087036390}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (2)
   m_TagString: Shade
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1881653334462574}
   m_LocalRotation: {x: -0.108871005, y: -0, z: -0, w: 0.99405587}
-  m_LocalPosition: {x: -49.3, y: 5.3999996, z: 66.799995}
+  m_LocalPosition: {x: -33.4, y: 13, z: 101}
   m_LocalScale: {x: 4.82445, y: 4.82445, z: 4.82445}
   m_Children:
   - {fileID: 4920550240036222}
