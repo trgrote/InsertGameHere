@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 136024542619595772}
   m_Layer: 0
   m_Name: shade zone
-  m_TagString: Untagged
+  m_TagString: Shade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,9 +68,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153426698323040}
-  m_LocalRotation: {x: -0.10886113, y: 0.0014683394, z: 0.013406796, w: 0.9939655}
-  m_LocalPosition: {x: -10.3, y: -1.8, z: 23.4}
-  m_LocalScale: {x: 3.5773804, y: 3.5773804, z: 3.5773802}
+  m_LocalRotation: {x: -0.10886111, y: 0.0014683394, z: 0.013406796, w: 0.9939655}
+  m_LocalPosition: {x: -7.1, y: 0.7, z: 34.7}
+  m_LocalScale: {x: 3.5773783, y: 3.5773783, z: 3.5773802}
   m_Children:
   - {fileID: 4320884222173400}
   - {fileID: 4483183529410690}
