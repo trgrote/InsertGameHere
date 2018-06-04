@@ -8,6 +8,7 @@ TagManager:
   - OnFireExit
   - TannedExit
   - NPC
+  - Shade
   layers:
   - Default
   - TransparentFX
