@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4214023491313162}
   - component: {fileID: 136839427438031064}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: red umbrella
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4320884222173400}
   - component: {fileID: 33473380356022380}
   - component: {fileID: 23210147844277124}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 33256228673581930}
   - component: {fileID: 23771176745007690}
   - component: {fileID: 64763519071913498}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tree (far shadow)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

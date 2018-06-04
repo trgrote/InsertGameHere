@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 33166444501719448}
   - component: {fileID: 23563109346463984}
   - component: {fileID: 64103138087984884}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tree (close shadow)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
