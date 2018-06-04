@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4078454712961670}
   - component: {fileID: 114481586892992876}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: hotdogs
   m_TagString: Interest
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 33561258960204952}
   - component: {fileID: 23671479682281452}
   - component: {fileID: 95533095533437232}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hotdog (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 33856635666696292}
   - component: {fileID: 23898466725877494}
   - component: {fileID: 95492471843052290}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hotdog (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 33246597452058732}
   - component: {fileID: 23804428737435666}
   - component: {fileID: 95498827358588498}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hotdog (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,8 +87,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381840654865274}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 91.90826, y: 1.91, z: 43.338722}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.6, y: 157.59454, z: -391.2}
   m_LocalScale: {x: 2.71008, y: 2.7100792, z: 2.7100792}
   m_Children:
   - {fileID: 4545219544513578}

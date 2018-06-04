@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4466527394703082}
   - component: {fileID: 33097874998813612}
   - component: {fileID: 23375197492203948}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4466528018367932}
   - component: {fileID: 95510935954978502}
   - component: {fileID: 114037223824313012}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Milkshake
   m_TagString: Interest
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4962168557719520}
   - component: {fileID: 33230823570818432}
   - component: {fileID: 23462216164403992}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Milkshake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1533394292915806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100.81, y: 1.74, z: 44.7}
+  m_LocalPosition: {x: 28.7, y: 3.4, z: 89.5}
   m_LocalScale: {x: 2.1444216, y: 2.14442, z: 2.14442}
   m_Children:
   - {fileID: 4466527394703082}

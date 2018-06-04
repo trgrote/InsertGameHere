@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4129962027460302}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4548360013152274}
   - component: {fileID: 114079250517721582}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icecream
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 33507968217871944}
   - component: {fileID: 23712384271179892}
   - component: {fileID: 95235330760958296}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Icecream3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4434611072353140}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icecream
   m_TagString: Interest
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 33204736467949918}
   - component: {fileID: 23018593084081864}
   - component: {fileID: 95298712323843640}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Icecream
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4897273464325540}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 33063741631976364}
   - component: {fileID: 23722828110562838}
   - component: {fileID: 95556244079480642}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Icecream2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1660533337206192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.48816, y: 3.3, z: 65.80167}
+  m_LocalPosition: {x: 144.82047, y: 4.4, z: 53.907413}
   m_LocalScale: {x: 2.0050354, y: 2.0050356, z: 2.0050356}
   m_Children:
   - {fileID: 4548360013152274}

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4381113833854918}
   - component: {fileID: 114156152736574462}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: burger meal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 33912251231852644}
   - component: {fileID: 23886042840144374}
   - component: {fileID: 95158730038140040}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Soda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4169123611831494}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: burger meal
   m_TagString: Interest
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 33772496522944408}
   - component: {fileID: 23260689953599888}
   - component: {fileID: 95262149910667276}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Burger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1622311055929270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 88.09535, y: 1.1633216, z: 54.971973}
+  m_LocalPosition: {x: 21.2, y: 2.5, z: 17}
   m_LocalScale: {x: 1.796174, y: 1.7961767, z: 1.7961757}
   m_Children:
   - {fileID: 4381113833854918}
