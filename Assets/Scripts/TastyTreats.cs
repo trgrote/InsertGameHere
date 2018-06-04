@@ -13,6 +13,9 @@ public class TastyTreats : MonoBehaviour {
 	[SerializeField] float rotationSpeedPerSecond = 1f;
 	[SerializeField] float bobHeight = 5f;
 	[SerializeField] float bobPeriod = 3f;
+
+    float randomTimeOffset = 0f;
+
 	// Use this for initialization
 	void Start () {
 		xDirection = transform.localEulerAngles.x;
@@ -20,6 +23,8 @@ public class TastyTreats : MonoBehaviour {
 		zDirection = transform.localEulerAngles.z;
 
 		startingPosition = transform.localPosition;
+
+        randomTimeOffset = Random.Range(0f, 3f);
 	}
 	
 	// Update is called once per frame
@@ -37,7 +42,7 @@ public class TastyTreats : MonoBehaviour {
 
     private void ProcessBob()
     {
-        float cycles = Time.time / bobPeriod; //grows forever from zero
+        float cycles = (randomTimeOffset + Time.time) / bobPeriod; //grows forever from zero
 
         const float tau = Mathf.PI * 2f; // just a constant, ~6.28
 
