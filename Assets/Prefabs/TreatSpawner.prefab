@@ -23,7 +23,7 @@ GameObject:
   m_Layer: 0
   m_Name: TreatSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1299418926714612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 78.6, y: -3.6, z: 63.4}
+  m_LocalPosition: {x: 25.83, y: 4.23, z: 34.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,7 +56,5 @@ MonoBehaviour:
   - {fileID: 1381840654865274, guid: b482517b0372f9a4cb3b14c798d62e7f, type: 2}
   - {fileID: 1622311055929270, guid: ab23a11eaecf8f949a5f24f418193c4e, type: 2}
   - {fileID: 1533394292915806, guid: f3ffdf3b7953f044189a4616463d0c63, type: 2}
-  timeBetweenSpawn: 3.18
-  spawnSquareRadius: 50.33
-  spawnHeight: 7.82
-  maxTreats: 6
+  minBetweenSpawn: 10
+  maxTimeBetweenSpawn: 15
