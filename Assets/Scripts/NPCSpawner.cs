@@ -14,8 +14,8 @@ public class NPCSpawner : MonoBehaviour
 	[SerializeField] [Range(0,1)] float spawnTimeDecay = 0.02f;
 
 	
-	private float minTimeBetweenSpawn;
-	private float maxTimeBetweenSpawn;
+	public float minTimeBetweenSpawn;
+	public float maxTimeBetweenSpawn;
 	
 	public void Spawn()
 	{
