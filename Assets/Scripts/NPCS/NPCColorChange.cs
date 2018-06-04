@@ -28,10 +28,11 @@ public class NPCColorChange : MonoBehaviour {
     {
         Color combinedColor = CombinedColor();
 
-        rend.material.shader = Shader.Find("_Color");
-        rend.material.SetColor("_Color", combinedColor);
-        rend.material.shader = Shader.Find("Specular");
-        rend.material.SetColor("_SpecColor", new Color(0, 0, 0, 0));
+		rend.material.color = combinedColor;
+        // rend.material.shader = Shader.Find("_Color");
+        // rend.material.SetColor("_Color", combinedColor);
+        // rend.material.shader = Shader.Find("Specular");
+        // rend.material.SetColor("_SpecColor", new Color(0, 0, 0, 0));
     }
 
     private Color CombinedColor() {
