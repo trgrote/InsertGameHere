@@ -8,7 +8,6 @@ public class TastyTreats : MonoBehaviour {
 	private float yDirection;
 	private float zDirection;
 
-	private Vector3 position;
 	private Vector3 startingPosition;
 
 	[SerializeField] float rotationSpeedPerSecond = 1f;
@@ -21,7 +20,6 @@ public class TastyTreats : MonoBehaviour {
 		zDirection = transform.localEulerAngles.z;
 
 		startingPosition = transform.localPosition;
-		position = transform.localPosition;
 	}
 	
 	// Update is called once per frame
