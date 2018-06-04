@@ -12,7 +12,7 @@ public class NPCSpawner : MonoBehaviour
 
 	public void Spawn()
 	{
-		Instantiate(prefab);
+		Instantiate(prefab, transform.position, Quaternion.identity);
 	}
 
 	void Start()
